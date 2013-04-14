@@ -288,7 +288,7 @@ def panic(key):
 def api_log(key, message):
 	"Log data to the API"
 	# Inform the API of the panic condition
-	message += 'on host ' + socket.gethostname()
+	message += ' on host ' + socket.gethostname()
 	log_url = api_url + logging_uri
 	# Stupid json.dumps() chokes on utcnow() so doing json manually for now
 	#   no biscuit for json.dumps()
